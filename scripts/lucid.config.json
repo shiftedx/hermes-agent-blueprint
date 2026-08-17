@@ -1,0 +1,70 @@
+{
+  "_comment": "Lucid Dreamer config. Install at <PROFILE_HOME>/lucid/lucid.config.json. The scripts auto-detect every path from their own location; the only value you MUST set is vault_path. Everything else has working defaults.",
+
+  "agent_name": "<AGENT>",
+  "timezone": "<TZ>",
+  "vault_path": "<WORKSPACE>/Vault",
+  "vault_journal_subdir": "Lucid Dreamer",
+
+  "_comment_review": "Windows paths work fine here — use forward slashes (C:/Users/<name>/Documents/<agent>-workspace/Vault) or escaped backslashes. Forward slashes are less error-prone.",
+
+  "confidence_auto_apply": 0.85,
+  "lookback_days_extract": 2,
+  "lookback_days_review": 7,
+  "trend_window_days": 14,
+  "trend_hot_threshold_days": 3,
+  "memory_char_limit": 2200,
+  "user_char_limit": 1375,
+  "per_session_char_cap": 3000,
+
+  "_comment_exclude": "Session IDs containing any of these substrings are skipped when building daily notes. Keep the lucid entries: without them the agent dreams about its own dreaming.",
+  "exclude_session_id_substrings": ["lucid", "mem-test", "verify-"],
+
+  "_comment_exclude_text": "Optional regexes; any message matching one is dropped from daily notes. Use for retired workflows or noisy automation. Empty by default.",
+  "session_exclude_patterns": [],
+
+  "_comment_topics": "Topic clustering for trend detection AND the vault graph. Keys are display names, values are lowercase substrings. Replace these with what the owner actually works on — the defaults are generic on purpose. Short, distinctive keywords work best.",
+  "topics": {
+    "Errors and Crashes": ["error", "exception", "traceback", "crash", "failed", "stack trace"],
+    "Hermes Agent": ["hermes", "gateway", "skill", "cron", "toolset", "approval"],
+    "Memory and Lucid": ["lucid", "memory", "fact store", "vault", "nightly review"],
+    "Learning": ["learned", "explain", "how does", "why does", "tutorial", "concept"],
+    "Coding": ["python", "javascript", "function", "bug", "refactor", "git", "repo"],
+    "Performance": ["latency", "throughput", "benchmark", "slow", "speedup"],
+    "Security": ["security", "vulnerability", "credential", "secret", "auth"],
+    "Infrastructure": ["config", "deploy", "install", "update", "backup", "docker"]
+  },
+
+  "_comment_colors": "Graph-view colour per topic (hex, no #). Any topic without an entry is grey. Purely cosmetic.",
+  "topic_colors": {
+    "Errors and Crashes": "e06c75",
+    "Hermes Agent": "61afef",
+    "Memory and Lucid": "ab47bc",
+    "Learning": "22c55e",
+    "Coding": "f59e0b",
+    "Performance": "ffca28",
+    "Security": "ff8b50",
+    "Infrastructure": "56b6c2",
+    "General": "78909c"
+  },
+
+  "_comment_categories": "Colour per fact category (facts.category in the DB). Unknown categories fall back to grey. Optional.",
+  "category_colors": {
+    "identity": "2196f3",
+    "career": "f44336",
+    "projects": "4caf50",
+    "goals": "cddc39",
+    "values": "9c27b0",
+    "tech_stack": "00bcd4",
+    "hardware": "ff9800",
+    "interests": "8d6e63",
+    "infrastructure": "3f51b5",
+    "security": "009688",
+    "learning": "22c55e",
+    "general": "78909c"
+  },
+
+  "_comment_projects": "Only useful once the owner has several distinct projects. Colouring by PROJECT reads far better than by category on a multi-project graph. project_category_prefixes maps a category prefix to a project name, e.g. {\"gm_\": \"game-project\"}. Both empty by default.",
+  "project_colors": {},
+  "project_category_prefixes": {}
+}
