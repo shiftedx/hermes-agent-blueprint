@@ -52,7 +52,6 @@ reference/
   04-lucid-dreaming.md      §8      the nightly cycle ⚑ read §8a first
   05-operations.md          §9      staying alive, safe config edits, log rotation
   06-bring-up-and-owner-handoff.md  §11–§13  the checklist, and what to tell the human
-  example-deployment.md     §10     one real deployment's numbers and corrections
 templates/                  SOUL.md, AGENTS.md, and the two cron prompts — all with blanks
 scripts/                    the nightly cycle, ready to install (stdlib-only Python)
 ```
@@ -82,9 +81,8 @@ are different claims.
   git snapshot, graph scan, idempotent re-run. What that could not cover is Windows itself and
   `setup-windows-scheduler.ps1`, which are reasoned from documentation. Run each entry point by
   hand once before trusting the schedule, and please open an issue with what you find.
-- **This will rot.** It is pinned to a Hermes version, and one of the corrections in
-  `example-deployment.md` is a case of exactly that: a "we patched this file locally" note that
-  was wrong because upstream had adopted the fix months earlier. Prefer the verification commands
+- **This will rot.** It is pinned to a Hermes version: a "we patched this file locally" note can
+  be wrong because upstream adopted the fix months earlier. Prefer the verification commands
   over the prose, and send a PR when a claim goes stale.
 
 ## Contributing

@@ -51,17 +51,15 @@ Cross-references throughout use `§N`. Resolve them here:
 | `reference/04-lucid-dreaming.md` | §8 | the nightly cycle, cron prompts, ⚑ §8a scheduling |
 | `reference/05-operations.md` | §9 | staying alive, safe config edits, log rotation |
 | `reference/06-bring-up-and-owner-handoff.md` | §11–§13 | the checklist; what to tell the human |
-| `reference/example-deployment.md` | §10 | one real deployment's numbers and corrections |
 
 `templates/` holds `SOUL.md`, `AGENTS.md`, and the two cron prompts — all with `<PLACEHOLDER>`
 blanks. `scripts/` is the nightly cycle, ready to install; see `scripts/README.md`.
 
 ## Working rules
 
-- **Verify, don't assert.** Every checkbox in §11 needs a command and its output. Most of the
-  corrections in `example-deployment.md` exist because earlier notes asserted state instead of
-  re-reading it — including one where "we patched X locally" was wrong because upstream had
-  adopted the fix months earlier.
+- **Verify, don't assert.** Every checkbox in §11 needs a command and its output. Notes that
+  assert state instead of re-reading it go stale — a "we patched X locally" note can be wrong
+  because upstream adopted the fix months earlier.
 - **Read §8a before building any part of §8.** Cron jobs are fired by the gateway's background
   ticker. Create the whole nightly cycle without one and every job is created successfully,
   appears in the Cron pane, and never runs. There is no error message.

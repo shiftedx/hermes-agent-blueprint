@@ -39,7 +39,7 @@ Invoke these rather than improvising:
 
 - **`superpowers:using-superpowers`** — first, as always; establishes skill discipline for the rest of the session.
 - **`superpowers:brainstorming`** — before writing `SOUL.md`/`AGENTS.md`. The persona is a design decision about how the owner wants to be taught, not a text-generation task. Interview them.
-- **`superpowers:verification-before-completion`** — mandatory for §11. Every checkbox needs a command and its output, not an assertion. Most of the corrections in §10 exist because earlier notes asserted state instead of re-reading it.
+- **`superpowers:verification-before-completion`** — mandatory for §11. Every checkbox needs a command and its output, not an assertion.
 - **`superpowers:systematic-debugging`** — when the gateway won't connect, memory tools throw, or a cron is silently failing. The failure modes here (silent schema mismatch, dual plugins, unloaded service) all look like something else at first glance.
 - **`obsidian-vault`** — the actual mechanism for §7; read it before scaffolding the vault so the note/wikilink conventions match what the nightly gardening job expects.
 - **`hermes-agent-tools` / `agent-workflow-conventions`** — Hermes-native config, cron, and skill mechanics; prefer these over guessing CLI flags.
